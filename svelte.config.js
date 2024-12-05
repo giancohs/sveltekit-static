@@ -18,7 +18,7 @@ const config = {
 			strict: false
 		}),
 		paths: {
-			base: '/sveltekit-static' // change this to the name of the static site and repository
+			base: '/projects/sveltekit-static'
 		}
 	}
 };
