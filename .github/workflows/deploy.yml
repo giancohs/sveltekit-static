@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         env:
-          BASE_PATH: '/projects/sveltekit-static'
+          BASE_PATH: 'static/projects/sveltekit-static'
         run: |
           npm run build
           
@@ -35,15 +35,15 @@ jobs:
 
       - name: Copy build to target repo
         run: |
-          rm -rf public-page/projects/sveltekit-static
-          mkdir -p public-page/projects/sveltekit-static
-          cp -r build/* public-page/projects/sveltekit-static/
+          rm -rf public-page/static/projects/sveltekit-static
+          mkdir -p public-page/static/projects/sveltekit-static
+          cp -r build/* public-page/static/projects/sveltekit-static/
           
       - name: Commit and push changes
         run: |
           cd public-page
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add projects
-          git commit -m "Update projects/sveltekit-static from private repo"
+          git add static/projects/sveltekit-static
+          git commit -m "Update static/projects/sveltekit-static from private repo"
           git push
