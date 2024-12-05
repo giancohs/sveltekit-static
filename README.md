@@ -1,4 +1,23 @@
-# sv
+# Notes
+
+This sveltekit configuration is only for basic static site and visualizations.
+
+When you want to deploy to github static site, you need to install the adapter `@sveltejs/adapter-static`. 
+Run `npm install @sveltejs/adapter-static`
+
+Then create a `+layout.js` file inside the `src/routes` folder and add the following code:
+
+```js
+export const prerender = true;
+```
+
+Then change the `svelte.config.js` file to the following:
+
+```js
+import adapter from '@sveltejs/adapter-static';
+```
+
+# General steps
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
