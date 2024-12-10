@@ -16,6 +16,17 @@ Then change the `svelte.config.js` file to the following:
 ```js
 import adapter from '@sveltejs/adapter-static';
 ```
+You should also change the names of the project in the following files:
+- `.github/workflows/deploy.yml`
+- `package.json`
+- `svelteconfig.js`
+
+Then, if you install a new package, you should add the `--save` flag to the command. For example:
+
+```bash
+npm install --save @sveltejs/adapter-static
+npm install --save mapbox-gl
+```
 
 # General steps
 
