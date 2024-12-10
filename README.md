@@ -28,6 +28,15 @@ npm install --save @sveltejs/adapter-static
 npm install --save mapbox-gl
 ```
 
+If you are working with tokens and .env files, you need to add the secrets in the github repository secrets. Then, update the github actions workflow to include the secrets. For example:
+
+```bash
+  - name: Create .env file
+        run: |
+          echo "VITE_MAPBOX_ACCESS_TOKEN=${{ secrets.MAPBOX_TOKEN }}" > .env
+```
+"VITE_MAPBOX_ACCESS_TOKEN" is the name of token in the .env file locally. "MAPBOX_TOKEN" is the name of the secret in the github repository secrets and it is used in the code to access the token.
+
 # General steps
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
