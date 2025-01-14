@@ -6,7 +6,8 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: '/sveltekit-static'
+			// This is the base path for the project, which is set in the github action, and is the name of the repository
+			base: process.env.BASE_PATH ? '/' + process.env.BASE_PATH : ''
 		}
 	},
 	preprocess: vitePreprocess()

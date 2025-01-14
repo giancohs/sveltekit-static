@@ -12,7 +12,7 @@
 	"forwardPorts": [9173],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install && npm install @sveltejs/adapter-static && npm install mapbox-gl", 
+	"postCreateCommand": "sed -i 's/\"name\": \".*\"/\"name\": \"'$(basename $(pwd))'\"/' package.json && npm install && npm install @sveltejs/adapter-static && npm install mapbox-gl",
 
 	// Configure tool-specific properties.
 	"customizations": {

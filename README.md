@@ -1,5 +1,8 @@
 # Steps and notes
 
+Important:
+- After creating the repository, go to settings, under "Secrets and variables", "Actions", add the secret PERSONAL_TOKEN in order to deploy the project in github pages.
+
 This sveltekit configuration is a personalized template that aims to help with the following:
 - Get a ready dev environment with the dependencies to start working on a sveltekit project.
 - Automatically deploy and update the current project to the default personal github pages site via github actions.
